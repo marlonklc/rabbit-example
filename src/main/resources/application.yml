@@ -1,0 +1,37 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name: rabbit-async-example
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USER:user}
+    password: ${RABBITMQ_PASS:password}
+    virtual-host: ${RABBITMQ_VHOST:vhost}
+    retry:
+      enabled: true
+      max-attempts: 3
+      initial-interval: 1000
+      max-interval: 5000
+  datasource:
+    url: jdbc:h2:file:~/testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      asyncexample: DEBUG
