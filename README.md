@@ -7,7 +7,9 @@ The project was divided between endpoints(apis), producers and consumers.
 The principal point of this project its on messages that apis do to process your workflows on background. It depends on your need, but sometimes you have a heavy process or when you need to process a lot of requests at same time. It avoid problems with instabilities or scale of your system.
 
 ### Requirements to run
-You'll needed set environments variables below to connect on rabbit server (I use a rabbitmq cloud free account - https://customer.cloudamqp.com/login)
+- obviously you needed installed Java 11+
+- rabbitmq server (I use a rabbitmq cloud free account - https://customer.cloudamqp.com/login)
+- You'll needed set environments variables below to connect on rabbit server
 ```
 RABBITMQ_HOST
 RABBITMQ_PORT
