@@ -62,7 +62,7 @@ BODY RESPONSE
 ```
 
 [PUT] http://localhost:3000/task/{id}/next-step \
-API responsible to run a next step proccess to task. It produces a message on rabbit to run a procces on background (consumer).
+API responsible to run a next step proccess to task. It produces (rabbit producer) a message on rabbit to run a procces (rabbit consumer) on background.
 ```
 doesn't have body to request 
 ```
